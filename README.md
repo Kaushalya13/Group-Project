@@ -1,51 +1,28 @@
-# SHENI
+🌿 Unseen Kalutara | Breathe. Explore. Heal.
+"Discover the soulful sanctuary of Kalutara's hidden gems. A journey into nature, culture, and wellness awaits."
 
-Welcome to the official repository for **SHENI**, where elegance meets modernity.  
-This is more than just a clothing website; it's a digital boutique crafted to provide a seamless and luxurious shopping experience.  
-Our mission is to blend timeless style with contemporary design, all while delivering a fast, responsive, and visually stunning online platform.
+🌟 Project Overview
+Unseen Kalutara is a modern, performance-driven web application built with Next.js, designed to promote the hidden beauty of Kalutara, Sri Lanka, and its focus on sustainable, slow-travel tourism.
 
----
+The site serves as a digital gateway, guiding visitors through fairytale trails, fresh forests, and waterfalls while highlighting the region's rich culture, wellness traditions, and local cuisine. The core mission is to promote responsible tourism that drives Economic Empowerment, supports the Preservation of Heritage, and acts as a Model for Sustainable Travel.
 
-## About The Project
+✨ Key Features
+Immersive Home Experience: A dynamic, full-screen Hero section with the main message: "The hidden beauty of Kaluganthota".
 
-SHENI is a showcase of what's possible when fashion and technology intertwine.  
-Built with a passion for clean aesthetics and a commitment to performance, this project serves as the digital face of a modern clothing brand.  
+Framer Motion Animations: Extensive use of framer-motion for captivating animations, ensuring a high-quality, engaging user experience in sections like Attractions and Brands.
 
-It features a curated collection of apparel, presented through a dynamic and engaging user interface.  
-From smooth animations to user-friendly navigation, SHENI is designed to inspire confidence and style.
+Modular Content Sections: Dedicated, scroll-to sections for all aspects of the journey, including:
 
----
+Attractions & Heritage Sites: Showcasing landmarks like Thudugala Ella and Richmond Castle.
 
-## Features
+Adventure & Walks: Presenting diverse trails from Forest Paths to the Forest Odyssey.
 
-- Stunning visuals with a modern, elegant design  
-- Smooth animations powered by Framer Motion  
-- Fully responsive layout for mobile, tablet, and desktop  
-- Intuitive navigation for a simple shopping experience  
-- Dynamic product showcases for categories and promotions  
-- Optimized for performance with Next.js  
+Wellness & Culture: Highlighting Ayurvedic treatments and the rich cultural tapestry of Sacred Temples and Historic Churches.
 
----
+Wildlife: Dedicated sections for local fauna, such as Vibrant Birdlife and Elusive Leopards.
 
-## Tech Stack
+Explore Hub: A central navigation grid allowing users to quickly jump to a section of interest.
 
-- Next.js – Fast and scalable React framework  
-- Tailwind CSS – Utility-first styling for modern UI  
-- TypeScript – Strong typing for maintainable code  
-- Framer Motion – Animations and transitions  
-- React Icons / Lucide React – Icon library  
+E-commerce/Brand Integration: Features a promotional section (e.g., "20% OFF Spring Collection") and a logo ticker showcasing Exclusive Brands, utilizing scalable ProductCard components.
 
----
-
-## Getting Started
-
-Follow these steps to run SHENI locally:
-
-### Prerequisites
-- Node.js (v14 or higher)  
-- npm or yarn  
-
-### Installation
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/sheni-clothing.git
+Custom Design System: Utilizes a custom Tailwind CSS configuration for a unique, nature-inspired palette.
