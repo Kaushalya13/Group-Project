@@ -30,7 +30,7 @@ const Walks = () => {
           Find The Perfect Walk For Yourself
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Choose from a variety of trails that cater to all levels of fitness and adventure. Each path offers a unique perspective of the reserve's stunning landscapes.
+            Choose from a variety of trails that cater to all levels of fitness and adventure. Each path offers a unique perspective of the reserve&apos;s stunning landscapes.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {walks.map((walk, index) => (

@@ -8,7 +8,6 @@ import Navbar from "@/sections/Navbar";
 import PromoSection from "@/sections/PromoSection";
 import Walks from "@/sections/Walks";
 import Wellness from "@/sections/Wellness";
-import Image from "next/image";
 import Wildlife from "@/sections/Wildlife";
 
 export default function Home() {

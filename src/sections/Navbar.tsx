@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -24,10 +24,12 @@ export default function Navbar() {
             <div className="grid grid-cols-2 lg:grid-cols-3 p-2 px-6 items-center">
               {/* Logo */}
               <div>
-                <img
+                <Image
                   src={logoUrl}
                   alt="Unseen Kalutara Logo"
-                  className="h-14 w-14 rounded-full"
+                  width={56}
+                  height={56}
+                  className="rounded-full"
                 />
               </div>
 

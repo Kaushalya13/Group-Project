@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 export default function Hero() {
   const heroImage =
@@ -18,10 +19,12 @@ export default function Hero() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0 -top-20">
-        <img
+        <Image
           src={heroImage}
           alt="Lush waterfall in a forest"
-          className="w-full h-full object-cover absolute "
+          layout="fill"
+          objectFit="cover"
+          className="w-full h-full absolute "
         />
         {/* Optional dark overlay for readability */}
         <div className="absolute inset-0"></div>
