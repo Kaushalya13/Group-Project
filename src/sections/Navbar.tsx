@@ -1,7 +1,7 @@
 // src/sections/Navbar.tsx
 "use client";
 
-import Image from "next/image";
+// REMOVED: import Image from "next/image"; 
 import { useState, useEffect } from "react"; // Import useEffect for scroll logic
 import { AnimatePresence, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";

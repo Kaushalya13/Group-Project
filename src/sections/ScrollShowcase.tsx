@@ -5,62 +5,67 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 // FiMaximize replaces the non-existent FiRuler
-import { FiMapPin, FiClock, FiMaximize, FiMap } from "react-icons/fi";
+import { FiMapPin, FiClock, FiMaximize, FiMap } from "react-icons/fi"; 
 
 // Data Structure 
 const sectionsData = [
-    {
-        title: "RANNAGALA ELLA",
-        image: "/images/rannagala-ella.jpg",
-        details: [
-            { icon: FiMapPin, label: "Location", value: "Rannagala village in Neboda, Kalutara district." },
-            { icon: FiMaximize, label: "Height", value: "Approx 6 meters (best seen during rainy season)." },
-            { icon: FiMap, label: "Access", value: "5.7 km from Matugama town on the Neboda road." },
-        ],
-        full_description: "This small Rannagala Ella Waterfall is approx 6 meters in height and is best seen during the rainy season. You can reach this waterfall easily from Matugama or Neboda.",
-    },
-    {
-        title: "NARTHUPANA BRIDGE",
-        image: "/images/narthupana-bridge.jpg",
-        details: [
-            { icon: FiMapPin, label: "Location", value: "Crosses the Kalu Ganga River, 2 km from city center." },
-            { icon: FiMaximize, label: "Nickname", value: "Known locally as the Rainbow Bridge." },
-            { icon: FiClock, label: "Best Time", value: "Sunset, when the sky reflects on the water." },
-        ],
-        full_description: "Narthupana Bridge is admired for its calm surroundings and scenic views, making it a popular place for travelers and locals to relax and take photographs.",
-    },
-    {
-        title: "KALUTARA BODHIYA",
-        image: "/images/kaluthara-bodhiya.jpg",
-        details: [
-            { icon: FiMapPin, label: "Location", value: "Heart of Kalutara town beside the Kalu Ganga River." },
-            { icon: FiMaximize, label: "Feature", value: "Home to one of the few hollow stupas in the world (walkable inside)." },
-            { icon: FiClock, label: "Significance", value: "A peaceful and spiritual place where thousands of devotees come to pray and make offerings." },
-        ],
-        full_description: "Kalutara Bodhiya is one of the most famous Buddhist temples in Sri Lanka, a symbol of faith and harmony.",
-    },
-    {
-        title: "RICHMOND CASTLE",
-        image: "/images/richmond-castle.jpg",
-        details: [
-            { icon: FiMapPin, label: "Location", value: "Sits on a hill 2 km (1.2 mi) from Kalutara, adjoining the Kalu Ganga." },
-            { icon: FiMaximize, label: "Type", value: "Edwardian mansion built between 1900 and 1910." },
-            {
-                icon: FiClock, label: "Status", value: "Currently owned by the Public Trustee and open to the public.",
-            },
-        ],
-        full_description: "Richmond Castle was the country seat of Mudaliyar Don Arthur de Silva Wijesinghe Siriwardena. It offers a glimpse into colonial architecture.",
-    },
-    {
-        title: "THUDUGALA ELLA",
-        image: "/images/thudugala-ella.jpg",
-        details: [
-            { icon: FiMapPin, label: "Location", value: "Thudugala village, 8Km from Kalutara town." },
-            { icon: FiMaximize, label: "Height", value: "Approx 8 meters (Rank 268th of Sri Lanka's waterfalls)." },
-            { icon: FiClock, label: "Best For", value: "A refreshing dip and a peaceful day out in nature." },
-        ],
-        full_description: "The Thudugala Ella waterfall is a popular natural attraction in the Dodangoda Divisional Secretariat area of Kalutara District.",
-    },
+  {
+    title: "RANNAGALA ELLA",
+    image: "/images/rannagala-ella.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Rannagala village in Neboda, Kalutara district." },
+      { icon: FiMaximize, label: "Height", value: "Approx 6 meters (best seen during rainy season)." },
+      { icon: FiMap, label: "Access", value: "5.7 km from Matugama town on the Neboda road." },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "This small Rannagala Ella Waterfall is approx 6 meters in height and is best seen during the rainy season. You can reach this waterfall easily from Matugama or Neboda.",
+  },
+  {
+    title: "NARTHUPANA BRIDGE",
+    image: "/images/narthupana-bridge.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Crosses the Kalu Ganga River, 2 km from city center." },
+      { icon: FiMaximize, label: "Nickname", value: "Known locally as the Rainbow Bridge." },
+      { icon: FiClock, label: "Best Time", value: "Sunset, when the sky reflects on the water." },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "Narthupana Bridge is admired for its calm surroundings and scenic views, making it a popular place for travelers and locals to relax and take photographs.",
+  },
+  {
+    title: "KALUTARA BODHIYA",
+    image: "/images/kaluthara-bodhiya.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Heart of Kalutara town beside the Kalu Ganga River." },
+      { icon: FiMaximize, label: "Feature", value: "Home to one of the few hollow stupas in the world (walkable inside)." },
+      { icon: FiClock, label: "Significance", value: "A peaceful and spiritual place where thousands of devotees come to pray and make offerings." },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "Kalutara Bodhiya is one of the most famous Buddhist temples in Sri Lanka, a symbol of faith and harmony.",
+  },
+  {
+    title: "RICHMOND CASTLE",
+    image: "/images/richmond-castle.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Sits on a hill 2 km (1.2 mi) from Kalutara, adjoining the Kalu Ganga." },
+      { icon: FiMaximize, label: "Type", value: "Edwardian mansion built between 1900 and 1910." },
+      {
+        icon: FiClock, label: "Status", value: "Currently owned by the Public Trustee and open to the public.",
+      },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "Richmond Castle was the country seat of Mudaliyar Don Arthur de Silva Wijesinghe Siriwardena. It offers a glimpse into colonial architecture.",
+  },
+  {
+    title: "THUDUGALA ELLA",
+    image: "/images/thudugala-ella.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Thudugala village, 8Km from Kalutara town." },
+      { icon: FiMaximize, label: "Height", value: "Approx 8 meters (Rank 268th of Sri Lanka's waterfalls)." },
+      { icon: FiClock, label: "Best For", value: "A refreshing dip and a peaceful day out in nature." },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "The Thudugala Ella waterfall is a popular natural attraction in the Dodangoda Divisional Secretariat area of Kalutara District.",
+  },
 ];
 
 // Animation variants for the image (entering from side)
@@ -153,10 +158,10 @@ export default function ScrollShowcase() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="font-lora text-center mb-16 text-dark-text pt-8 md:pt-12"
+                    className="font-lora text-center mb-16 text-dark-text pt-8 md:pt-12" 
                 >
                     <h2 className="text-4xl md:text-5xl font-bold inline-flex items-center">
-                        Discover Kalutara's Jewels
+                        Discover Kalutara&apos;s Jewels
                         {/* LOCATION ICON WITH CONTINUOUS PULSE/LOOP */}
                         <motion.span
                             variants={mapPinVariants}
@@ -171,13 +176,13 @@ export default function ScrollShowcase() {
                 </motion.div>
             </div>
 
-            <div className="flex flex-col gap-0">
+            <div className="flex flex-col gap-0"> 
                 {sectionsData.map((item, index) => {
                     const isEven = index % 2 === 0;
                     const direction = isEven ? 1 : -1;
 
                     return (
-                        <div key={index} className="py-0">
+                        <div key={index} className="py-0"> 
                             <motion.div
                                 className={`flex flex-col lg:flex-row w-full overflow-hidden ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                                     }`}
@@ -185,7 +190,7 @@ export default function ScrollShowcase() {
                             >
                                 {/* Image Section */}
                                 <motion.div
-                                    custom={direction}
+                                    custom={direction} 
                                     variants={imageVariants}
                                     initial="hidden"
                                     whileInView="visible"
@@ -210,14 +215,14 @@ export default function ScrollShowcase() {
 
                                 {/* Details/Text Section */}
                                 <motion.div
-                                    custom={direction}
+                                    custom={direction} 
                                     variants={textVariants}
                                     initial="hidden"
                                     whileInView="visible"
                                     className="w-full lg:w-1/2 p-8 md:p-12 flex flex-col justify-center bg-white relative"
                                 >
                                     {/* Pattern Overlay - Now clearly visible behind content */}
-                                    <PatternOverlay />
+                                    <PatternOverlay /> 
 
                                     {/* Content Wrapper (z-10) */}
                                     <div className="relative z-10">
