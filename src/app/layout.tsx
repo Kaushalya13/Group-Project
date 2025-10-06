@@ -1,6 +1,21 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import { Lato, Lora } from "next/font/google"; // Import the fonts
 import "./globals.css";
+
+// Define the font loaders
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-lato", // Define CSS variable
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-lora", // Define CSS variable
+});
+
 
 export const metadata: Metadata = {
   title: "Unseen Kalutara | Breathe. Explore. Heal.",
@@ -14,12 +29,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-lato bg-light-bg text-dark-text">{children}</body>
+      {/* Attach font variables to the body */}
+      <body className={`${lato.variable} ${lora.variable} font-lato bg-light-bg text-dark-text`}>{children}</body>
     </html>
   );
 }
