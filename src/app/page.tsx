@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Attractions from "@/sections/Attractions";
 import Brands from "@/sections/Brands";
 import Cuisine from "@/sections/Cuisine";
@@ -9,17 +10,23 @@ import PromoSection from "@/sections/PromoSection";
 import Walks from "@/sections/Walks";
 import Wellness from "@/sections/Wellness";
 import Wildlife from "@/sections/Wildlife";
-import WhyPromote from "@/sections/WhyPromote"; 
+import OurBookingProcess from "@/sections/OurBookingProcess";
 
 import ExploreHub from "@/sections/ExploreHub";
+import DestinationShowcase from "@/sections/DestinationShowcase";
+import ScrollShowcase from "@/sections/ScrollShowcase";
 
 export default function Home() {
   return (
     <>
-    <Navbar />
+      {/* Navbar should be the first element, fixed to the top */}
+      <Navbar />
+      {/* Hero now handles its own top padding to start content below the fixed Navbar */}
       <Hero />
-      <WhyPromote /> 
-      <ExploreHub /> 
+      <OurBookingProcess />
+      <DestinationShowcase />
+      <ScrollShowcase />
+      <ExploreHub />
       <Attractions />
       <Wellness />
       <Cuisine />
