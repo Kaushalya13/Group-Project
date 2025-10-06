@@ -58,7 +58,7 @@ export default function ExploreHub() {
             Attractions & Activities: Find Your Sanctuary
           </h2>
           <p className="text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
-            Select a theme to jump to a section and begin crafting your unforgettable journey through Kalutara's soulful heart.
+            Select a theme to jump to a section and begin crafting your unforgettable journey through Kalutara&apos;s soulful heart.
           </p>
         </motion.div>
 

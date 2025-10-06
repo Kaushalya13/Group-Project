@@ -20,10 +20,10 @@ const config: Config = {
         "light-bg": "#F8F9FA",
       },
       fontFamily: {
-        // A clean sans-serif for body text
-        lato: ["Lato", "sans-serif"],
-        // An elegant serif for headings
-        lora: ["Lora", "serif"],
+        // A clean sans-serif for body text - NOW USING CSS VARIABLE
+        lato: ["var(--font-lato)", "sans-serif"],
+        // An elegant serif for headings - NOW USING CSS VARIABLE
+        lora: ["var(--font-lora)", "serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

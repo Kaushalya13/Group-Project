@@ -40,7 +40,7 @@ export default function WhyPromote() {
             The Heartbeat of Our Mission
           </h2>
           <p className="text-center text-lg text-gray-600 mb-16 max-w-3xl mx-auto">
-            Promoting Kalutara's hidden gems is not just about travel—it's about creating a sustainable, equitable future for Sri Lanka.
+            Promoting Kalutara&apos;s hidden gems is not just about travel—it&apos;s about creating a sustainable, equitable future for Sri Lanka.
           </p>
         </motion.div>
 
