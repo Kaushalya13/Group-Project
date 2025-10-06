@@ -1,28 +1,31 @@
+// src/sections/Attractions.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
+// UPDATED: Attraction details and order, including Narthupana Bridge.
 const attractions = [
   {
-    name: "Thudugala Waterfall",
-    description: "A serene and accessible waterfall perfect for a refreshing dip and a peaceful day out in nature.",
+    name: "Thudugala Ella",
+    description: "The Thudugala Ella is an 8-meter high waterfall located about 8Km from Kalutara town. Ranked 268th in Sri Lanka, it's perfect for a refreshing dip and a peaceful day out in nature.",
     image: "https://i.pinimg.com/736x/5e/4d/4f/5e4d4fdc2a8a602ad75107daf7c56bb9.jpg"
   },
   {
-    name: "Rannagala Waterfall",
-    description: "Hike through lush greenery to discover hidden streams and natural pools on this scenic and rewarding trail.",
-    image: "https://i.pinimg.com/736x/86/3a/f1/863af1f7daec39ad7b918e98ec34c47f.jpg"
-  },
-  {
-    name: "Rechman Casula",
-    description: "A peaceful and historic site in Kalutara, perfect for exploring local heritage and enjoying calm surroundings.",
+    name: "Richmond Castle",
+    description: "An impressive Edwardian mansion built between 1900 and 1910, sitting on a hill 2 km (1.2 mi) from the Kalutara city center, adjoining the Kalu Ganga. Open to the public for heritage tours.",
     image: "/images/richmond-castle.jpg"
   },
   {
-    name: "Kalutara Bodhiya",
-    description: "One of Sri Lanka’s sacred Buddhist sites, offering a serene atmosphere for reflection and spiritual connection.",
-    image: "https://i.pinimg.com/1200x/2e/e4/00/2ee400ba82131f256606eb5b7df6d63f.jpg"
+    name: "Narthupana Bridge (Rainbow Bridge)",
+    description: "A beautiful bridge that crosses the Kalu Ganga River, connecting the two sides of the town. Admired for its calm surroundings and scenic views, especially during a beautiful sunset.",
+    // NOTE: This image is a placeholder for the bridge, as one was not provided in the original file.
+    image: "https://i.pinimg.com/originals/81/7e/4d/817e4d84c0e62d4e6d3c35b5a7a7263c.jpg"
+  },
+  {
+    name: "Rannagala Ella Waterfall",
+    description: "This small, approximately 6-meter high waterfall is located in Rannagala village in Neboda. It is best seen during the rainy season and is easily accessible from Matugama or Neboda.",
+    image: "https://i.pinimg.com/736x/86/3a/f1/863af1f7daec39ad7b918e98ec34c47f.jpg"
   }
 ];
 
@@ -53,9 +56,10 @@ export default function Attractions() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-lora text-4xl md:text-5xl font-bold text-center mb-4">Natural Attractions</h2>
+          {/* UPDATED: Section Title to reflect the mix of sites */}
+          <h2 className="font-lora text-4xl md:text-5xl font-bold text-center mb-4">Attractions & Heritage Sites</h2>
           <p className="text-center text-lg text-gray-600 mb-16 max-w-2xl mx-auto">
-            Immerse yourself in the pristine natural beauty that Kalutara has to offer.
+            Immerse yourself in the pristine natural beauty and rich cultural history that Kalutara has to offer.
           </p>
         </motion.div>
         

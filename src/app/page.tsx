@@ -9,12 +9,17 @@ import PromoSection from "@/sections/PromoSection";
 import Walks from "@/sections/Walks";
 import Wellness from "@/sections/Wellness";
 import Wildlife from "@/sections/Wildlife";
+import WhyPromote from "@/sections/WhyPromote"; 
+
+import ExploreHub from "@/sections/ExploreHub";
 
 export default function Home() {
   return (
     <>
     <Navbar />
       <Hero />
+      <WhyPromote /> 
+      <ExploreHub /> 
       <Attractions />
       <Wellness />
       <Cuisine />
