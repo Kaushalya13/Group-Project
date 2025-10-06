@@ -3,7 +3,7 @@ import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-lush-green text-gray-300">
+    <footer id="contact" className="bg-lush-green bg-black text-white">
       <div className="container mx-auto px-6 pt-20 pb-10">
         {/* Newsletter */}
         <div className="text-center mb-16">
@@ -21,7 +21,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-earthy-brown text-white font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform"
+              className="bg-earthy-brown bg-white text-black font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform"
             >
               Subscribe
             </button>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left ">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold text-white font-lora mb-4">

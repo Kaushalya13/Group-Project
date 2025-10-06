@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   const heroImage =
-    "https://i.pinimg.com/736x/c9/fd/5a/c9fd5ac44a1b05cbb1b300b80f2d4e97.jpg"; // beautiful waterfall image
+    "https://i.pinimg.com/736x/c9/fd/5a/c9fd5ac44a1b05cbb1b300b80f2d4e97.jpg"; 
 
   return (
     <section
@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-lora text-5xl md:text-7xl font-bold leading-tight text-white"
         >
-          Feel The Unity With The Power of Nature
+          The hidden beauty of Kaluganthota
         </motion.h1>
 
         <motion.p
@@ -58,7 +58,7 @@ export default function Hero() {
         >
           <a
             href="#about"
-            className="bg-white bg-opacity-20 backdrop-blur-md border border-balck text-black font-bold py-4 px-10 rounded-full text-lg hover:bg-opacity-40 transition duration-300 shadow-lg"
+            className="bg-white bg-opacity-20 backdrop-blur-md text-black font-bold py-4 px-10 rounded-full text-lg hover:bg-opacity-40 transition duration-300 shadow-lg"
           >
             Explore More
           </a>
