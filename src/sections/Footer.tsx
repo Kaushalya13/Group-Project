@@ -14,10 +14,10 @@ import {
 } from "react-icons/fi";
 
 const socialLinks = [
-    { name: "Facebook", icon: FiFacebook, href: "#" },
+    { name: "Facebook", icon: FiFacebook, href: "https://www.facebook.com/share/1A6uQv76aC/" },
     { name: "Instagram", icon: FiInstagram, href: "#" },
     { name: "YouTube", icon: FiYoutube, href: "#" },
-    { name: "TikTok", icon: FiTwitter, href: "#" }, // Using Twitter icon as placeholder for TikTok
+    { name: "TikTok", icon: FiTwitter, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" }, // Using Twitter icon as placeholder for TikTok
 ];
 
 // Framer Motion Variants for staggered entrance
@@ -180,7 +180,18 @@ export default function Contact() {
                             </h4>
                             <div className="flex items-center space-x-2 text-md text-gray-300">
                                 <FiMail className="text-earthy-brown" />
-                                <a href="mailto:contact@kalutara.com" className="hover:text-white transition">contact@kalutara.com</a>
+                                <a href="mailto:rangarisameesha@gmail.com" className="hover:text-white transition">rangarisameesha@gmail.com</a>
+                            </div>
+                        </div>
+
+                        {/* Direct contact Link (Simplified from two columns) */}
+                        <div className="space-y-2">
+                            <h4 className="font-semibold text-lush-green uppercase tracking-wider">
+                                Contact Us
+                            </h4>
+                            <div className="flex items-center space-x-2 text-md text-gray-300">
+                                <FiMail className="text-earthy-brown" />
+                                <a href="mailto:0761875606" className="hover:text-white transition">0761875606</a>
                             </div>
                         </div>
 

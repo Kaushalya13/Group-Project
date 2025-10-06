@@ -110,7 +110,7 @@ export default function OurBookingProcess() {
         {/* ADDED: The "Say Hello" Button with Enhanced Animation and Theming */}
          <div className="text-center mt-12">
              <motion.a 
-                href="mailto:thisara.kavishka@example.com" 
+                href="mailto:rangarisameesha@gmail.com" 
                 // Set initial scale and whileHover to create the "pop" effect
                 initial={{ scale: 1 }}
                 whileHover={{ scale: 1.07 }}
