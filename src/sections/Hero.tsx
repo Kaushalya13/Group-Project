@@ -5,7 +5,7 @@ import React from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 // CHANGED: Replaced FiArrowDown with FiChevronsDown for the double arrow look
-import { FiChevronsDown } from "react-icons/fi"; 
+import { FiChevronsDown } from "react-icons/fi";
 
 // Define the custom bounce animation variants
 const bounceArrow: Variants = {
@@ -69,7 +69,7 @@ export default function Hero() {
         </motion.p>
 
         <div className="mt-10 h-12">
-            {/* Empty div to maintain spacing where the button was */}
+          {/* Empty div to maintain spacing where the button was */}
         </div>
       </div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
       <motion.div
         className="absolute bottom-10 z-20 cursor-pointer"
       >
-        <a href="#our-process" aria-label="Scroll down to discover more">
+        <a href="#explore" aria-label="Scroll down to discover more">
           <motion.div
             variants={bounceArrow}
             animate="animate"

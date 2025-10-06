@@ -41,11 +41,10 @@ const iconAnimate: Variants = {
 
 export default function OurBookingProcess() {
   return (
-    // MINIMAL SECTION HEIGHT: Reduced vertical padding and background color text adjusted for dark contrast.
+    // MINIMAL SECTION HEIGHT
     <section 
       id="our-process" 
       className="relative py-12 md:py-16 overflow-hidden" 
-      // Background gradient maintained for nature-themed energy field effect
       style={{ background: `radial-gradient(circle at 50% 50%, rgba(248, 249, 250, 1) 40%, rgba(220, 230, 220, 1) 100%)` }}
     >
       <div className="container mx-auto px-4 relative z-10">
@@ -106,6 +105,21 @@ export default function OurBookingProcess() {
               <p className="text-dark-text/70 text-xs">{step.description}</p>
             </motion.div>
           ))}
+        </div>
+        
+        {/* ADDED: The "Say Hello" Button with Enhanced Animation and Theming */}
+         <div className="text-center mt-12">
+             <motion.a 
+                href="mailto:thisara.kavishka@example.com" 
+                // Set initial scale and whileHover to create the "pop" effect
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.07 }}
+                whileTap={{ scale: 0.95 }}
+                // Thematic colors: Lush Green for base, Earthy Brown for hover
+                className="bg-black text-white hover:bg-earthy-brown px-10 py-3 rounded-full font-extrabold inline-block transition-colors duration-300 shadow-2xl uppercase tracking-wider"
+            >
+                Book Your Trip
+            </motion.a>
         </div>
       </div>
     </section>

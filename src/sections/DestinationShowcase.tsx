@@ -5,19 +5,29 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 // Importing Chevron icons for navigation
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi"; 
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 // Data Structure (using your latest provided list)
 const destinations = [
     {
-        title: "THUDUGALA ELLA",
+        title: "KALUTARA JUMMA MOSQUE",
         subtitle: "KALUTARA, SRI LANKA",
-        image: "/images/thudugala-ella.jpg",
+        image: "/images/Mosque.jpg",
     },
     {
         title: "KALUTHARA BODHIYA",
         subtitle: "KALUTHARA BODHIYA, SRI LANKA",
         image: "/images/kaluthara-bodhiya.jpg",
+    },
+    {
+        title: "KALUTHARA KOVIL",
+        subtitle: "KALUTARA, SRI LANKA",
+        image: "/images/kovil.jpg",
+    },
+    {
+        title: "THUDUGALA ELLA",
+        subtitle: "KALUTARA, SRI LANKA",
+        image: "/images/thudugala-ella.jpg",
     },
     {
         title: "NARTHUPANA BRIDGE",
@@ -27,18 +37,13 @@ const destinations = [
     {
         title: "RICHMOND CASTLE",
         subtitle: "PALACE, KALUTARA",
-        image: "/images/richmond-castle.jpg", 
+        image: "/images/richmond-castle.jpg",
     },
     {
         title: "RANNAGALA ELLA",
         subtitle: "NEBODA, SRI LANKA",
         image: "/images/rannagala-ella.jpg",
-    },
-    {
-        title: "KANDE VIHARAYA",
-        subtitle: "ALUTHGAMA, TEMPLE",
-        image: "https://images.pexels.com/photos/1614860/pexels-photo-1614860.jpeg",
-    },
+    }
 ];
 
 // Framer Motion Variants for smooth cross-fade animation
@@ -54,7 +59,7 @@ export default function DestinationShowcase() {
     // ADDED: Auto-advance logic (reintroduced)
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentIndex((prevIndex) => 
+            setCurrentIndex((prevIndex) =>
                 (prevIndex + 1) % destinations.length
             );
         }, 3000); // Cycles every 5 seconds
@@ -70,13 +75,13 @@ export default function DestinationShowcase() {
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + destinations.length) % destinations.length);
     };
-    
+
     const currentDest = destinations[currentIndex];
 
     return (
         // Height h-[85vh] maintained
-        <section id="destinations" className="relative h-[85vh] overflow-hidden">
-            
+        <section id="destinations" className="relative h-[90vh] overflow-hidden">
+
             {/* 1. Background Image Container with Cross-Fade */}
             <AnimatePresence initial={false}>
                 <motion.div
@@ -93,7 +98,7 @@ export default function DestinationShowcase() {
                         layout="fill"
                         objectFit="cover"
                         className="w-full h-full"
-                        priority 
+                        priority
                     />
                     {/* Dark Overlay maintained */}
                     <div className="absolute inset-0 bg-dark-text/50 backdrop-brightness-[0.7]"></div>
@@ -123,7 +128,7 @@ export default function DestinationShowcase() {
                     </motion.div>
                 </AnimatePresence>
             </div>
-            
+
             {/* 3. Manual Navigation Buttons (Left/Right) - Kept for user control */}
             <button
                 onClick={handlePrev}

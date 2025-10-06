@@ -1,92 +1,220 @@
+// src/sections/Footer.tsx (Minimalist Contact Form)
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
-import { FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
+import { motion, Variants } from "framer-motion";
+import {
+    FiFacebook,
+    FiInstagram,
+    FiTwitter,
+    FiYoutube,
+    FiSend,
+    FiMail
+} from "react-icons/fi";
 
-const Footer = () => {
-  return (
-    <footer id="contact" className="bg-lush-green bg-black text-white">
-      <div className="container mx-auto px-6 pt-20 pb-10">
-        {/* Newsletter */}
-        <div className="text-center mb-16">
-          <h2 className="font-lora text-3xl md:text-4xl font-bold text-white">
-            Plan Your Escape
-          </h2>
-          <p className="mt-3 text-gray-400">
-            Subscribe for travel tips, exclusive offers, and news from Unseen Kalutara.
-          </p>
-          <form className="mt-6 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-5 py-3 rounded-full text-black bg-white focus:outline-none focus:ring-2 focus:ring-earthy-brown"
-            />
-            <button
-              type="submit"
-              className="bg-earthy-brown bg-white text-black font-semibold px-8 py-3 rounded-full hover:scale-105 transition-transform"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
+const socialLinks = [
+    { name: "Facebook", icon: FiFacebook, href: "#" },
+    { name: "Instagram", icon: FiInstagram, href: "#" },
+    { name: "YouTube", icon: FiYoutube, href: "#" },
+    { name: "TikTok", icon: FiTwitter, href: "#" }, // Using Twitter icon as placeholder for TikTok
+];
 
-        {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left ">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-bold text-white font-lora mb-4">
-              Unseen Kalutara
-            </h3>
-            <p className="text-sm leading-relaxed">
-              Your soulful sanctuary. A journey into nature, culture, and wellness.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 uppercase tracking-wider">
-              Explore
-            </h4>
-            <ul className="space-y-2">
-              <li><a href="#attractions" className="hover:text-earthy-brown transition">Attractions</a></li>
-              <li><a href="#walks" className="hover:text-earthy-brown transition">Walks</a></li>
-              <li><a href="#cuisine" className="hover:text-earthy-brown transition">Cuisine</a></li>
-              <li><a href="#wellness" className="hover:text-earthy-brown transition">Wellness</a></li>
-              <li><a href="#wildlife" className="hover:text-earthy-brown transition">Wildlife</a></li>
-              <li><a href="#culture" className="hover:text-earthy-brown transition">Culture</a></li>
-            </ul>
-          </div>
-
-          {/* Help */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 uppercase tracking-wider">
-              Info
-            </h4>
-            <ul className="space-y-2">
-              <li><Link href="/faq" className="hover:text-earthy-brown transition">FAQs</Link></li>
-              <li><Link href="/contact" className="hover:text-earthy-brown transition">Contact Us</Link></li>
-              <li><Link href="/privacy" className="hover:text-earthy-brown transition">Privacy Policy</Link></li>
-            </ul>
-          </div>
-
-          {/* Socials */}
-          <div>
-            <h4 className="font-semibold text-white mb-4 uppercase tracking-wider">
-              Follow Us
-            </h4>
-            <div className="flex justify-center md:justify-start space-x-5">
-              <a href="#" aria-label="Facebook" className="hover:text-earthy-brown transition"><FiFacebook size={22} /></a>
-              <a href="#" aria-label="Instagram" className="hover:text-earthy-brown transition"><FiInstagram size={22} /></a>
-              <a href="#" aria-label="Twitter" className="hover:text-earthy-brown transition"><FiTwitter size={22} /></a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="border-t border-gray-700/50 mt-12 pt-6 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Unseen Kalutara. All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
+// Framer Motion Variants for staggered entrance
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+        },
+    },
 };
 
-export default Footer;
+const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+
+export default function Contact() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submissionStatus, setSubmissionStatus] = useState("");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmissionStatus("");
+
+        // Placeholder API submission logic
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+
+        // Simulate success or failure
+        if (Math.random() > 0.1) {
+            setSubmissionStatus("Success! Your message has been sent. We'll be in touch soon.");
+            setFormData({ name: "", email: "", message: "" });
+        } else {
+            setSubmissionStatus("Error! Something went wrong. Please try emailing us directly.");
+        }
+        setIsSubmitting(false);
+    };
+
+    return (
+        <footer id="contact" className="bg-dark-text bg-black text-white py-16 md:py-24">
+            <div className="container mx-auto px-6">
+
+                {/* Main Contact Grid (Form & Info) */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={containerVariants}
+                    className="grid lg:grid-cols-2 gap-10" // Reduced gap
+                >
+
+                    {/* 1. Contact Form */}
+                    <motion.div variants={itemVariants} className="space-y-6">
+                        <motion.h3 className="font-lora font-bold text-3xl text-lush-green" variants={itemVariants}>
+                            Plan Your Journey
+                        </motion.h3>
+                        <p className="text-gray-300">
+                            Ready to explore Kalutara? Send us a message and our local experts will craft your personalized itinerary.
+                        </p>
+
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <motion.div variants={itemVariants}>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 bg-dark-text/70 border border-earthy-brown/50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-lush-green"
+                                    placeholder="Your name"
+                                />
+                            </motion.div>
+
+                            <motion.div variants={itemVariants}>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    className="w-full px-4 py-3 bg-dark-text/70 border border-earthy-brown/50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-lush-green"
+                                    placeholder="your.email@example.com"
+                                />
+                            </motion.div>
+
+                            <motion.div variants={itemVariants}>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                    rows={4}
+                                    className="w-full px-4 py-3 bg-dark-text/70 border border-earthy-brown/50 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-lush-green resize-none"
+                                    placeholder="Tell us about your ideal trip..."
+                                />
+                            </motion.div>
+
+                            {submissionStatus && (
+                                <p className={`text-center font-semibold text-sm ${submissionStatus.includes("Success") ? 'text-lush-green' : 'text-earthy-brown'}`}>
+                                    {submissionStatus}
+                                </p>
+                            )}
+
+                            <motion.button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full bg-lush-green text-white font-extrabold py-3 px-8 rounded-lg shadow-xl hover:bg-earthy-brown transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                                variants={itemVariants}
+                                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                            >
+                                {isSubmitting ? (
+                                    <motion.div
+                                        className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                                        animate={{ rotate: 360 }}
+                                        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                                    />
+                                ) : (
+                                    <FiSend size={20} />
+                                )}
+                                {isSubmitting ? 'Sending Message...' : 'Send Message'}
+                            </motion.button>
+                        </form>
+                    </motion.div>
+
+                    {/* 2. Brand Info and Socials */}
+                    <motion.div variants={itemVariants} className="lg:pt-4 space-y-8">
+
+                        {/* Brand Information */}
+                        <div className="space-y-3">
+                            <h3 className="font-lora font-bold text-3xl text-white">
+                                Unseen Kalutara
+                            </h3>
+                            <p className="text-gray-400">
+                                Your soulful sanctuary. A journey into nature, culture, and wellness.
+                            </p>
+                        </div>
+
+                        {/* Direct Email Link (Simplified from two columns) */}
+                        <div className="space-y-2">
+                            <h4 className="font-semibold text-lush-green uppercase tracking-wider">
+                                Email Us
+                            </h4>
+                            <div className="flex items-center space-x-2 text-md text-gray-300">
+                                <FiMail className="text-earthy-brown" />
+                                <a href="mailto:contact@kalutara.com" className="hover:text-white transition">contact@kalutara.com</a>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="space-y-2">
+                            <h4 className="font-semibold text-lush-green uppercase tracking-wider">
+                                Follow Us
+                            </h4>
+                            <div className="flex space-x-6">
+                                {socialLinks.map((social) => (
+                                    <a
+                                        key={social.name}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-white hover:text-earthy-brown transition-colors duration-300"
+                                        aria-label={`Follow us on ${social.name}`}
+                                    >
+                                        <social.icon size={26} />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                    </motion.div>
+                </motion.div>
+
+                {/* Bottom Copyright */}
+                <div className="border-t border-gray-700/50 mt-12 pt-6 text-center text-sm">
+                    <p className="text-gray-500">
+                        &copy; {new Date().getFullYear()} Unseen Kalutara. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    );
+}

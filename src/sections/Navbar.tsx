@@ -4,15 +4,14 @@
 import Image from "next/image";
 import { useState, useEffect } from "react"; // Import useEffect for scroll logic
 import { AnimatePresence, motion } from "framer-motion";
-import { FiMenu, FiX } from "react-icons/fi"; 
+import { FiMenu, FiX } from "react-icons/fi";
 
 // UPDATED: Simplified link structure, focusing on essential sections
 const simplifiedNavLinks = [
   { label: "Home", href: "#home" },
-  { label: "Attractions", href: "#attractions" },
-  { label: "Walks & Trails", href: "#walks" },
-  { label: "Wellness", href: "#wellness" },
-  { label: "Culture", href: "#culture" },
+  { label: "Explore", href: "#explore" },
+  { label: "Our process", href: "#our-process" },
+  { label: "Destinations", href: "#destinations" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -46,7 +45,7 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
+
     // Cleanup the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -56,17 +55,17 @@ export default function Navbar() {
   // Define dynamic classes based on scroll state
   const headerClasses = `
     py-4 lg:py-5 fixed w-full top-0 z-[999] shadow-xl transition-all duration-500
-    ${isScrolled 
+    ${isScrolled
       // State 1: Scrolled (Solid Black for contrast)
-      ? 'bg-black' 
+      ? 'bg-black'
       // State 2: Top of page (Semi-transparent dark-text/95 with blur)
       : 'bg-dark-text/95 backdrop-blur-sm'
     }
   `;
 
   return (
-    <div className="z-[999]"> 
-      <header 
+    <div className="z-[999]">
+      <header
         className={headerClasses} // Apply dynamic classes
       >
         <div className="mx-auto flex w-full max-w-6xl px-6 items-center justify-between">
@@ -106,18 +105,18 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="overflow-hidden lg:hidden bg-lush-green shadow-inner" 
+              className="overflow-hidden lg:hidden bg-lush-green shadow-inner"
             >
               <div className="flex flex-col gap-1 py-4 text-gray-200 w-full">
                 {simplifiedNavLinks.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block w-full text-center py-3 hover:bg-earthy-brown/80 font-lora text-xl font-bold uppercase text-white transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full text-center py-3 hover:bg-earthy-brown/80 font-lora text-xl font-bold uppercase text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
                 ))}
               </div>
             </motion.div>
