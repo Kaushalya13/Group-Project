@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import { FaTiktok } from "react-icons/fa";
 import {
     FiFacebook,
     FiInstagram,
@@ -17,7 +18,7 @@ const socialLinks = [
     { name: "Facebook", icon: FiFacebook, href: "https://www.facebook.com/share/1A6uQv76aC/" },
     { name: "Instagram", icon: FiInstagram, href: "#" },
     { name: "YouTube", icon: FiYoutube, href: "#" },
-    { name: "TikTok", icon: FiTwitter, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" }, // Using Twitter icon as placeholder for TikTok
+    { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" }, 
 ];
 
 // Framer Motion Variants for staggered entrance
