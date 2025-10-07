@@ -2,13 +2,11 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { FaTiktok } from "react-icons/fa";
 import {
     FiFacebook,
     FiInstagram,
-    FiTwitter,
     FiYoutube,
     FiSend,
     FiMail
@@ -18,7 +16,7 @@ const socialLinks = [
     { name: "Facebook", icon: FiFacebook, href: "https://www.facebook.com/share/1A6uQv76aC/" },
     { name: "Instagram", icon: FiInstagram, href: "#" },
     { name: "YouTube", icon: FiYoutube, href: "#" },
-    { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" }, 
+    { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" },
 ];
 
 // Framer Motion Variants for staggered entrance
@@ -143,7 +141,7 @@ export default function Contact() {
                             <motion.button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-lush-green text-white font-extrabold py-3 px-8 rounded-lg shadow-xl hover:bg-earthy-brown transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
+                                className="w-full bg-lush-green border-2 border-white text-white font-extrabold py-3 px-8 rounded-lg shadow-xl hover:bg-earthy-brown transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50"
                                 variants={itemVariants}
                                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                             >

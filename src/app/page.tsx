@@ -6,6 +6,8 @@ import OurBookingProcess from "@/sections/OurBookingProcess";
 
 import DestinationShowcase from "@/sections/DestinationShowcase";
 import ScrollShowcase from "@/sections/ScrollShowcase";
+import CulturalImmersion from "@/sections/CulturalImmersion";
+import ReligiousHarmony from "@/sections/ReligiousHarmony";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ScrollShowcase />
+      <CulturalImmersion />
+      <ReligiousHarmony />
       <OurBookingProcess />
       <DestinationShowcase />
       <Footer />
