@@ -29,10 +29,10 @@ const religiousHighlights = [
 
 // Image paths for the cycling background
 const heroBackgroundImages = [
-    "/images/kaluthara-bodhiya.jpg", // Buddhist Temple
-    "/images/Mosque.jpg",             // Mosque
-    "/images/kovil.jpg",              // Kovil
-    "/images/church.jpg",             // Church (Placeholder - User must ensure this exists)
+    "/images/kaluthara-bodhiya.jpg", 
+    "/images/Mosque.jpg",             
+    "/images/kovil.jpg",              
+    "/images/church.jpg",             
 ];
 
 // Animation for the cycling background images (Smooth cross-fade)
@@ -103,9 +103,6 @@ export default function ReligiousHarmony() {
                 </motion.div>
             </div>
 
-
-            {/* 2. ASYMMETRICAL IMMERSION BLOCK (Details Left, Image Right) */}
-            {/* HEIGHT INCREASED HERE */}
             <div className="relative w-full h-[70vh] md:h-[75vh] flex overflow-hidden"> 
                 
                 {/* Left Side: FLOATING CONTENT & HIGHLIGHTS (ALIGNED LEFT) */}
@@ -163,7 +160,6 @@ export default function ReligiousHarmony() {
                             objectFit="cover"
                             className="w-full h-full"
                         />
-                        {/* Gradient Overlay (REVERSED DIRECTION for blending from right to left) */}
                         <div className="absolute inset-0 bg-dark-text/70 lg:bg-gradient-to-l from-dark-text/80 to-dark-text/30"></div>
                     </motion.div>
                 </AnimatePresence>

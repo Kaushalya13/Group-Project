@@ -14,8 +14,8 @@ import {
 
 const socialLinks = [
     { name: "Facebook", icon: FiFacebook, href: "https://www.facebook.com/share/1A6uQv76aC/" },
-    { name: "Instagram", icon: FiInstagram, href: "#" },
-    { name: "YouTube", icon: FiYoutube, href: "#" },
+    { name: "Instagram", icon: FiInstagram, href: "https://www.instagram.com/thehiddenbeautyofkalugantho?utm_source=qr&igsh=MWh6b2plZnZ2Y2Jseg==" },
+    { name: "YouTube", icon: FiYoutube, href: "https://youtube.com/@kaluganthota?si=oLAU8gY0Gd-_ExMj" },
     { name: "TikTok", icon: FaTiktok, href: "https://www.tiktok.com/@rds.lanka?_t=ZS-90KMmCaIJEr&_r=1" },
 ];
 
@@ -190,7 +190,7 @@ export default function Contact() {
                             </h4>
                             <div className="flex items-center space-x-2 text-md text-gray-300">
                                 <FiMail className="text-earthy-brown" />
-                                <a href="mailto:0761875606" className="hover:text-white transition">0761875606</a>
+                                <a href="mailto:0761875606" className="hover:text-white transition">+94 761 875 606</a>
                             </div>
                         </div>
 

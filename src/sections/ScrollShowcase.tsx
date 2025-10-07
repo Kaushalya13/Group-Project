@@ -9,6 +9,17 @@ import { FiMapPin, FiClock, FiMaximize, FiMap } from "react-icons/fi";
 
 // Data Structure 
 const sectionsData = [
+    {
+    title: "THUDUGALA ELLA",
+    image: "/images/thudugala-ella.jpg",
+    details: [
+      { icon: FiMapPin, label: "Location", value: "Thudugala village, 8Km from Kalutara town." },
+      { icon: FiMaximize, label: "Height", value: "Approx 8 meters (Rank 268th of Sri Lanka's waterfalls)." },
+      { icon: FiClock, label: "Best For", value: "A refreshing dip and a peaceful day out in nature." },
+    ],
+    // FIXED: Escaped apostrophe (e.g., it's)
+    full_description: "The Thudugala Ella waterfall is a popular natural attraction in the Dodangoda Divisional Secretariat area of Kalutara District.",
+  },
   {
     title: "RANNAGALA ELLA",
     image: "/images/rannagala-ella.jpg",
@@ -54,17 +65,6 @@ const sectionsData = [
     ],
     // FIXED: Escaped apostrophe (e.g., it's)
     full_description: "Richmond Castle was the country seat of Mudaliyar Don Arthur de Silva Wijesinghe Siriwardena. It offers a glimpse into colonial architecture.",
-  },
-  {
-    title: "THUDUGALA ELLA",
-    image: "/images/thudugala-ella.jpg",
-    details: [
-      { icon: FiMapPin, label: "Location", value: "Thudugala village, 8Km from Kalutara town." },
-      { icon: FiMaximize, label: "Height", value: "Approx 8 meters (Rank 268th of Sri Lanka's waterfalls)." },
-      { icon: FiClock, label: "Best For", value: "A refreshing dip and a peaceful day out in nature." },
-    ],
-    // FIXED: Escaped apostrophe (e.g., it's)
-    full_description: "The Thudugala Ella waterfall is a popular natural attraction in the Dodangoda Divisional Secretariat area of Kalutara District.",
   },
 ];
 

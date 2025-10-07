@@ -1,52 +1,39 @@
-// src/sections/DestinationShowcase.tsx
+
 "use client";
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-// Importing Chevron icons for navigation
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-// Data Structure (using your latest provided list)
 const destinations = [
     {
-        title: "KALUTARA JUMMA MOSQUE",
+        title: "THUDUGALA ELLA",
         subtitle: "KALUTARA, SRI LANKA",
-        image: "/images/Mosque.jpg",
+        image: "/images/thudugala-ella-new.JPG",
+    },
+    {
+        title: "NARTHUPANA BRIDGE",
+        subtitle: "KALUGAN THOTA, SRI LANKA",
+        image: "/images/narthupana-bridge-new.JPG",
+    },
+    {
+        title: "RANNAGALA ELLA",
+        subtitle: "NEBODA, SRI LANKA",
+        image: "/images/rannagala-ella.jpg",
+    },
+    {
+        title: "RICHMOND CASTLE",
+        subtitle: "PALACE, KALUTARA",
+        image: "/images/richmond-castle-new.jpg",
     },
     {
         title: "KALUTHARA BODHIYA",
         subtitle: "KALUTHARA BODHIYA, SRI LANKA",
         image: "/images/kaluthara-bodhiya.jpg",
     },
-    {
-        title: "KALUTHARA KOVIL",
-        subtitle: "KALUTARA, SRI LANKA",
-        image: "/images/kovil.jpg",
-    },
-    {
-        title: "THUDUGALA ELLA",
-        subtitle: "KALUTARA, SRI LANKA",
-        image: "/images/thudugala-ella.jpg",
-    },
-    {
-        title: "NARTHUPANA BRIDGE",
-        subtitle: "KALUGAN THOTA, SRI LANKA",
-        image: "/images/narthupana-bridge.jpg",
-    },
-    {
-        title: "RICHMOND CASTLE",
-        subtitle: "PALACE, KALUTARA",
-        image: "/images/richmond-castle.jpg",
-    },
-    {
-        title: "RANNAGALA ELLA",
-        subtitle: "NEBODA, SRI LANKA",
-        image: "/images/rannagala-ella.jpg",
-    }
 ];
 
-// Framer Motion Variants for smooth cross-fade animation
 const contentVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -56,7 +43,6 @@ const contentVariants = {
 export default function DestinationShowcase() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // ADDED: Auto-advance logic (reintroduced)
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentIndex((prevIndex) =>
@@ -79,10 +65,8 @@ export default function DestinationShowcase() {
     const currentDest = destinations[currentIndex];
 
     return (
-        // Height h-[85vh] maintained
         <section id="destinations" className="relative h-[90vh] overflow-hidden">
 
-            {/* 1. Background Image Container with Cross-Fade */}
             <AnimatePresence initial={false}>
                 <motion.div
                     key={currentDest.title}
