@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Lato, Lora } from "next/font/google"; // Import the fonts
+import { Lato, Lora } from "next/font/google"; 
 import "./globals.css";
 
 // Define the font loaders
@@ -18,7 +18,7 @@ const lora = Lora({
 
 
 export const metadata: Metadata = {
-  title: "Unseen Kalutara | Breathe. Explore. Heal.",
+  title: "Unseen Kalutara",
   description: "Discover the soulful sanctuary of Kalutara's hidden gems. A journey into nature, culture, and wellness awaits.",
 };
 
