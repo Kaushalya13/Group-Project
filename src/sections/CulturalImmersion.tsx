@@ -34,7 +34,7 @@ const heroBackgroundImages = [
     "/images/culture-village.jpg",
     "/images/culture-village2.jpg",
     "/images/culture-tea.jpg",
-    "/images/culture-village3.jpg",
+    "/images/culture-village3.JPG",
     "/images/culture-tree.jpg",
 ];
 
