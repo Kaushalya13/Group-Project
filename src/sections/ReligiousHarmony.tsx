@@ -27,11 +27,10 @@ const religiousHighlights = [
     },
 ];
 
-// Image paths for the cycling background
 const heroBackgroundImages = [
     "/images/kaluthara-bodhiya.jpg", 
-    "/images/mosque.jpg",             
-    "/images/kovil.jpg",              
+    "/images/mosque.JPG",             
+    "/images/kovil.JPG",              
     "/images/church.jpg",             
 ];
 
